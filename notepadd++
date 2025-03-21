@@ -1,14 +1,6 @@
-@echo off
-set "shortcut_name=MyShortcut"
-set "target_path=C:\Program Files\Notepad++\notepad++.exe"
-set "desktop_path=C:\Users\Public\Desktop"
-set "shortcut_path=%desktop_path%\%shortcut_name%.lnk"
+Set oWS = WScript.CreateObject("WScript.Shell")
+sLinkFile = "C:\Notepad++.LNK"
+Set oLink = oWS.CreateShortcut(sLinkFile)
 
-echo Creating shortcut...
-powershell -Command "
-    $s=(New-Object -COM WScript.Shell).CreateShortcut('%shortcut_path%');
-    $s.TargetPath = '%target_path%';
-    $s.Save()
-"
-echo Shortcut created successfully!
-pause
+oLink.TargetPath = "C:\Program Files\Notepad++\Notepad++.EXE"
+oLink.Save
