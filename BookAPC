@@ -1,0 +1,5 @@
+@echo off
+echo [Book A PC] > "%USERPROFILE%\Desktop\Book A PC.url"
+echo URL=https://nottslibraries.getnetloan.co.uk/netloan >> "%USERPROFILE%\Desktop\Book A PC.url"
+echo IconIndex=0 >> "%USERPROFILE%\Desktop\Book A PC.url"
+echo IconFile=c:\Icons\computericon.ico >> "%USERPROFILE%\Desktop\Book A PC.url"
