@@ -1,0 +1,2 @@
+REG ADD "HKLM\Software\Policies\Microsoft\Edge" /v "RestoreOnStartup" /d 0x00000004 /t REG_DWORD /f
+REG ADD "HKLM\Software\Policies\Microsoft\Edge\RestoreOnStartupURLs" /v "1" /d "https://www.inspireculture.org.uk/reading-information/" /f 
